@@ -1,4 +1,4 @@
-import { faHome,  faPeopleGroup, faPersonRunning } from "@fortawesome/free-solid-svg-icons";
+import { faHome,  faPeopleGroup, faPersonRunning,faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -93,6 +93,15 @@ const Header = () => {
           <FontAwesomeIcon icon={faPeopleGroup} className="text-xl" />
           <span>Community</span>
         </Link>
+     
+        <Link
+          className="link flex items-center gap-2 p-2 hover:scale-105 "
+          to="/college-chapter"
+        >
+          <FontAwesomeIcon icon={faGraduationCap} className="text-xl" />
+          <span>College Chapter</span>
+        </Link>
+
         <Link
           target="_blank"
           className="link flex items-center gap-2 p-2 hover:scale-105 "

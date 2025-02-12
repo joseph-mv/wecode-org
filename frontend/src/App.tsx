@@ -9,6 +9,7 @@ import { useSelector, useDispatch } from "react-redux";
 import  HomePage  from "./pages/HomePage";
 import DashBoardPage from "./pages/DashBoardPage";
 import CommunityPage from "./pages/CommunityPage";
+import CollegeChapter from "./pages/CollegeChapter";
 import { RootState } from "./redux/store";
 import { AuthGoogle } from "./components/AuthGoogle/AuthGoogle";
 import { closeAuthModal } from "./redux/reducers/uiReducer";
@@ -35,6 +36,7 @@ export const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/dashboard" element={<DashBoardPage/>} />
         <Route path="/community" element={<CommunityPage/>} />
+        <Route path="/college-chapter" element={<CollegeChapter/>} />
       </Routes>
     </BrowserRouter>
   );
