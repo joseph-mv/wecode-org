@@ -1,15 +1,9 @@
-import { faHome,  faPeopleGroup, faPersonRunning } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faPersonRunning } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAppSelector } from "../../redux/store";
 
-// interface User {
-//   firstName: string;
-//   lastName: string;
-//   email: string;
-//   membershipType: string;
-// }
 
 const Header = () => {
   // State to track whether the hamburger menu is open or closed
@@ -29,17 +23,6 @@ const Header = () => {
   }, [isOpen]);
 
 
-   // const [user, setUser] = useState<User | null>(null);
-
-  // useEffect(() => {
-  //   // Get user data from URL query (or you can get from a state management tool like Redux)
-  //   const queryParams = new URLSearchParams(window.location.search);
-  //   const userData = queryParams.get('user');
-  //   if (userData) {
-  //     setUser(JSON.parse(userData));
-  //   }
-  // }, []);
-  // console.log(user)
   return (
     <header className=" flex p-3 h-20   justify-between items-center">
       <div className="rounded-full outline  outline-1">
@@ -86,13 +69,13 @@ const Header = () => {
           <FontAwesomeIcon icon={faHome} className="text-xl" />
           <span>Home</span>
         </Link>
-        <Link
+        {/* <Link
           className="link flex items-center gap-2 p-2 hover:scale-105 "
           to="/community"
         >
           <FontAwesomeIcon icon={faPeopleGroup} className="text-xl" />
           <span>Community</span>
-        </Link>
+        </Link> */}
         <Link
           target="_blank"
           className="link flex items-center gap-2 p-2 hover:scale-105 "

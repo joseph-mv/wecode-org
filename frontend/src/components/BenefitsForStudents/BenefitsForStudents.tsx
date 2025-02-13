@@ -42,13 +42,13 @@ const BenefitsForStudents = () => {
     },
   ];
   return (
-    <div className="max-w-7xl mx-auto ">
+    <div className="max-w-7xl mx-auto m-10">
       <h1 className="text-center">BENEFITS FOR THE STUDENTS</h1>
       <div className="flex md:px-28 gap-4">
-        <h2 className="text-lg font-lucida  vertical-heading">
+        <h2 className="text-lg font-lucida hidden lg:block  vertical-heading">
           THERE ARE TONS OF BENEFITS WAITING FOR YOU !{" "}
         </h2>
-        <div className=" flex flex-wrap gap-10 justify-center ">
+        <div className="flex flex-wrap gap-1 justify-center ">
           {benefits.map((benefit, index) => (
             <div data-aos="zoom-in "
               key={index}
