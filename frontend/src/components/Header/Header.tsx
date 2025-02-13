@@ -28,7 +28,7 @@ const Header = () => {
       <div className="rounded-full outline  outline-1">
         <img
           style={{ width: "50px", height: "auto" }}
-          src="images/logo.png"
+          src="/images/logo.png"
           alt="logo"
         />
       </div>

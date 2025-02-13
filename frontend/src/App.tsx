@@ -13,6 +13,7 @@ import CollegeChapter from "./pages/CollegeChapter";
 import { RootState } from "./redux/store";
 import { AuthGoogle } from "./components/AuthGoogle/AuthGoogle";
 import { closeAuthModal } from "./redux/reducers/uiReducer";
+import CollegePage from "./pages/CollegePage";
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -37,6 +38,8 @@ export const App = () => {
         <Route path="/dashboard" element={<DashBoardPage/>} />
         <Route path="/community" element={<CommunityPage/>} />
         <Route path="/college-chapter" element={<CollegeChapter/>} />
+        <Route path="/college-chapter/:name/:image/:location" element={<CollegePage/>} />
+
       </Routes>
     </BrowserRouter>
   );

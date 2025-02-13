@@ -14,3 +14,8 @@ html {
     font-size: 14px;
   }
 }
+/* @media (max-width: 550px) {
+  html {
+    font-size: 12px;
+  }
+} */
