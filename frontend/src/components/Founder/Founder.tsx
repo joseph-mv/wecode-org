@@ -32,10 +32,7 @@ const Founder = () => {
               globally, with a total of{" "}
               <span className="font-bold"> 4 trillion </span>meeting minutes{" "}
             </li>
-            <li>
-              Provided some of the most competitive salary packages at{" "}
-              <span className="font-bold"> Facebook (Meta) and Zoom</span>.
-            </li>
+           
           </ul>
         </div>
       </div>

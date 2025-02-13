@@ -1,41 +1,21 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowsToDot,
-  faAnglesLeft,
-  faAnglesRight,
-
 } from "@fortawesome/free-solid-svg-icons";
-import { useRef, useState } from "react";
-type Direction = "left" | "right";
+
 const BenefitsofTeam = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [tab, setTab] = useState<number>(1);
- const [direction, setDirection] = useState<Direction>("left")
-
-
-//left, right button actions 
-const handleTab = (direction: Direction) => { 
-  setDirection(direction)
-  if (direction === "left") setTab((prev) =>prev===1?prev=3: prev - 1);
-  else setTab((prev) =>prev%3 + 1);
-};
-
   return (
     <div className="max-w-7xl mx-auto mt-10   font-lucida">
       <h1 className="text-center mb-2">
         BENEFITS FOR THE CLUB LEADERSHIP TEAM
       </h1>
       <div
-        ref={scrollRef}
-        className="relative  flex h-[500px] md:gap-14  "
+        
+        className="space-y-8 p-4 "
       >
         {/*  A STRONG AND OUTSTANDING PROFILE section */}
         <div
-          className={`relative m-auto sm:max-w-[700px] sm:min-w-[700px] min-w-[100vw] h-[400px] overflow-hidden ${
-            tab !== 1 && "hidden"
-          }
-           ${direction==="left" && "animate-left2right" } 
-          ${direction==="right" && "animate-right2left" } 
+          className={`relative m-auto sm:max-w-[700px] sm:min-w-[700px] min-w-[100vw] h-[400px] overflow-hidden 
           block`}
         >
           <h2 className="text-center text-xl mb-14 font-trebuchet underline">
@@ -86,11 +66,7 @@ const handleTab = (direction: Direction) => {
         </div>
         {/* EXCLUSIVE INVITATIONS section */}
         <div
-          className={`relative overflow-hidden m-auto sm:max-w-[700px] sm:min-w-[700px] min-w-[100vw]  h-[400px] bg-black text-white p-2 ${
-            tab !== 2 && "hidden"
-          }
-           ${direction==="left" && "animate-left2right" } 
-          ${direction==="right" && "animate-right2left" }  block`}
+          className={`relative overflow-hidden m-auto sm:max-w-[700px] sm:min-w-[700px] min-w-[100vw]  h-[400px] bg-black text-white p-2  block`}
         >
           <h2 className=" text-xl mb-8 font-trebuchet underline">
             EXCLUSIVE INVITATIONS
@@ -115,11 +91,7 @@ const handleTab = (direction: Direction) => {
         </div>
         {/* EARLY EXPERIENCE OF BEING IN AN ORGANIZATION */}
         <div
-          className={`m-auto sm:min-w-[700px] min-w-[100vw]  h-[400px]  ${
-            tab !== 3 && "hidden"
-          } 
-           ${direction==="left" && "animate-left2right" } 
-          ${direction==="right" && "animate-right2left" }  block`}
+          className={`relative overflow-hidden m-auto sm:min-w-[700px] sm:max-w-[700px] min-w-[100vw] p-2 pb-4 block`}
         >
           <h2 className=" text-xl font-trebuchet underline ml-2">
             EARLY EXPERIENCE OF BEING IN AN ORGANIZATION
@@ -134,7 +106,7 @@ const handleTab = (direction: Direction) => {
                 FIRST EXPERIENCE{" "}
                
                 <img
-                  className="absolute left-[80%]  w-[50%] -rotate-[80deg] object-contain z-10"
+                  className="absolute left-[80%]  w-[50%] -rotate-[80deg] object-contain -z-10"
                   src="/images/arrow_bend_left_down_icon.png"
                   alt=""
                 />
@@ -153,7 +125,7 @@ const handleTab = (direction: Direction) => {
                     OWNERSHIP{" "}
                    
                     <img
-                      className="absolute left-[100%] bottom-0  w-[50%]  -rotate-[150deg]  object-contain"
+                      className="absolute left-[100%] bottom-0  w-[50%] -z-10 -rotate-[150deg]  object-contain"
                       src="/images/arrow_bend_left_down_icon.png"
                       alt=""
                     />
@@ -179,25 +151,6 @@ const handleTab = (direction: Direction) => {
             </div>
           </div>
         </div>
-        <button
-          className={`absolute  left-[5vw] top-[90%] md:top-[50%]`}
-          onClick={() => handleTab("left")}
-        >
-          <FontAwesomeIcon
-            className="text-gray-600 text-4xl"
-            icon={faAnglesLeft}
-          />
-        </button>
-        
-        <button
-          className={`absolute right-[5vw] top-[90%] md:top-[50%] `}
-          onClick={() => handleTab("right")}
-        >
-          <FontAwesomeIcon
-            className="text-gray-600 text-4xl"
-            icon={faAnglesRight}
-          />
-        </button>
       </div>
     </div>
   );

@@ -5,15 +5,25 @@ import About from "../components/About/About";
 import Values from "../components/Values/Values";
 
 // Lazy load components
-const CampusFeatures = React.lazy(() => import("../components/CampusFeatures/CampusFeatures"));
-const AdvOfInstitution = React.lazy(() => import("../components/AdvOfInstitution/AdvOfInstitution"));
-const Testimonials = React.lazy(() => import("../components/Testimonials/Testimonials"));
-const BenefitsOfTeam = React.lazy(() => import("../components/BenefitsofTeam/BenefitsofTeam"));
-const BenefitsForStudents = React.lazy(() => import("../components/BenefitsForStudents/BenefitsForStudents"));
+const CampusFeatures = React.lazy(
+  () => import("../components/CampusFeatures/CampusFeatures")
+);
+const AdvOfInstitution = React.lazy(
+  () => import("../components/AdvOfInstitution/AdvOfInstitution")
+);
+const Testimonials = React.lazy(
+  () => import("../components/Testimonials/Testimonials")
+);
+const BenefitsOfTeam = React.lazy(
+  () => import("../components/BenefitsofTeam/BenefitsofTeam")
+);
+const BenefitsForStudents = React.lazy(
+  () => import("../components/BenefitsForStudents/BenefitsForStudents")
+);
 const Founder = React.lazy(() => import("../components/Founder/Founder"));
 const Footer = React.lazy(() => import("../components/Footer/Footer"));
 
- const HomePage = () => {
+const HomePage = () => {
   return (
     <div>
       <Header />
@@ -22,14 +32,14 @@ const Footer = React.lazy(() => import("../components/Footer/Footer"));
 
       <Values />
       <Suspense fallback={<div>Loading...</div>}>
-      <CampusFeatures />
-      <AdvOfInstitution />
-      <Testimonials />
-      <BenefitsOfTeam />
-      <BenefitsForStudents />
-      <Founder />
-      <Footer />
-    </Suspense>
+        <CampusFeatures />
+        <AdvOfInstitution />
+        <Testimonials />
+        <BenefitsOfTeam />
+        <BenefitsForStudents />
+        <Founder />
+        <Footer />
+      </Suspense>
     </div>
   );
 };
