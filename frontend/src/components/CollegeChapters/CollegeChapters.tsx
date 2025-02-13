@@ -1,6 +1,6 @@
-import React from "react";
 
-import CollegeChapter from "../../../public/images/collegeChapters/banner_img.png";
+import { Link } from "react-router-dom";
+import CollegeChapter from "/images/collegeChapters/banner_img.png";
 
 function CollegeChapters() {
   const colleges = [
@@ -61,15 +61,15 @@ function CollegeChapters() {
       </section>
 
       <section className="m-12 p-6 border border-gray-700 rounded-lg shadow-lg bg-gray-50">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(270px,1fr))] justify-center   gap-6">
           {colleges.map((college, index) => (
-            <div key={index} className="border border-gray-300 shadow-md rounded-lg p-4 bg-white flex items-center space-x-4">
+            <Link to={`${encodeURIComponent(college.name)}/${encodeURIComponent(college.image)}/${encodeURIComponent(college.location)}`} key={index} className="  border border-gray-300 shadow-md rounded-lg p-4 bg-white flex items-center space-x-4 hover:bg-gray-100 cursor-pointer">
               <img src={college.image} alt={college.name} className="w-20 h-20 object-cover rounded-md" />
               <div>
                 <h3 className="text-lg font-semibold">{college.name}</h3>
                 <p className="text-gray-600">{college.location}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
