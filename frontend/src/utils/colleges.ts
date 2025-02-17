@@ -5,17 +5,19 @@ type Organizer = {
 };
 export type College = {
   name: string;
-  about:string
+  about?: string;
   place: string;
   image: string;
-  organizers: Organizer[];
+  comingSoon?: boolean;
+  organizers?: Organizer[];
 };
 
 export const colleges: College[] = [
   {
     name: "Lovely Professional University-LPU",
     place: "Chaheru, Phagwara , Punjab",
-    about:"Lovely Professional University (LPU) is a private university located in Chaheru, Phagwara, Punjab, India. The university was established in 2005 by Lovely International Trust, through the Lovely Professional University Act, 2005 (Punjab Act 25 of 2005) and started operation in 2006.",
+    about:
+      "Lovely Professional University (LPU) is a private university located in Chaheru, Phagwara, Punjab, India. The university was established in 2005 by Lovely International Trust, through the Lovely Professional University Act, 2005 (Punjab Act 25 of 2005) and started operation in 2006.",
     image: "/images/collegeChapters/colleges/Lpu/Lpu college.webp",
     organizers: [
       {
@@ -59,18 +61,112 @@ export const colleges: College[] = [
 
   {
     name: "Government College of Engineering, Kannur",
-    about:"Government College of Engineering, Kannur is one of the premier institutes among the 9 Government Engineering Colleges in Kerala and was established in 1986. The college is functioning in a sprawling 68-acre scenic campus, having sound and self-sufficient infrastructure,at Mangattuparamba, near the National Highway, 15 k.m from the headquarters of Kannur district.",
+    about:
+      "Government College of Engineering, Kannur is one of the premier institutes among the 9 Government Engineering Colleges in Kerala and was established in 1986. The college is functioning in a sprawling 68-acre scenic campus, having sound and self-sufficient infrastructure,at Mangattuparamba, near the National Highway, 15 k.m from the headquarters of Kannur district.",
     place: "Kannur, Kerala",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/7/77/Government_College_of_Engineering%2C_Kannur.jpg",
-      organizers:[
-        { name: "Aleena Ann Tomy", position: "Chairperson", image: "/images/collegeChapters/colleges/GCE Kannur/organizers/Aleena Ann Tomy.jpg" },
-        { name: "Vyshakh Rajeevan", position: "Vice Chairperson", image: "/images/collegeChapters/colleges/GCE Kannur/organizers/Vyshakh Rajeevan.jpg" },
-        { name: "Sreenand Murali", position: "Technical Head", image: "/images/collegeChapters/colleges/GCE Kannur/organizers/Sreenand Murali.jpg" },
-        { name: "Mohammed Fadil", position: "Event Head", image: "/images/collegeChapters/colleges/GCE Kannur/organizers/Mohammed Fadil.jpg" },
-        { name: "Vijay Kiran K", position: "Outreach Head", image: "/images/collegeChapters/colleges/GCE Kannur/organizers/Vijay Kiran K.jpg" },
-        { name: "Anshif T P", position: "Finance Head", image: "/images/collegeChapters/colleges/GCE Kannur/organizers/Anshif T P.jpg" }
-      ]
+    organizers: [
+      {
+        name: "Aleena Ann Tomy",
+        position: "Chairperson",
+        image:
+          "/images/collegeChapters/colleges/GCE Kannur/organizers/Aleena Ann Tomy.jpg",
+      },
+      {
+        name: "Vyshakh Rajeevan",
+        position: "Vice Chairperson",
+        image:
+          "/images/collegeChapters/colleges/GCE Kannur/organizers/Vyshakh Rajeevan.jpg",
+      },
+      {
+        name: "Sreenand Murali",
+        position: "Technical Head",
+        image:
+          "/images/collegeChapters/colleges/GCE Kannur/organizers/Sreenand Murali.jpg",
+      },
+      {
+        name: "Mohammed Fadil",
+        position: "Event Head",
+        image:
+          "/images/collegeChapters/colleges/GCE Kannur/organizers/Mohammed Fadil.jpg",
+      },
+      {
+        name: "Vijay Kiran K",
+        position: "Outreach Head",
+        image:
+          "/images/collegeChapters/colleges/GCE Kannur/organizers/Vijay Kiran K.jpg",
+      },
+      {
+        name: "Anshif T P",
+        position: "Finance Head",
+        image:
+          "/images/collegeChapters/colleges/GCE Kannur/organizers/Anshif T P.jpg",
+      },
+    ],
+  },
+
+  {
+    name: "College of Engineering, Trivandrum",
+    place: "Trivandrum, Kerala",
+    image: "https://www.cet.ac.in/wp-content/uploads/2018/10/p58.jpg",
+    comingSoon:true
+  },
+  {
+    name: "NIT Calicut",
+    place: "Calicut, Kerala",
+    image:
+      "https://nitc.ac.in/imgserver/uploads/compressed/events_vertical__0e23b8bb-9d06-4549-a091-4c40e05df015_0.png",
+      comingSoon:true
+  },
+  {
+    name: "Rajagiri School of Engineering & Technology",
+    place: "Kochi, Kerala",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQO51GfQQKqHZylM13wOi9t6Qe4u9zS5iBhQ&s",
+      comingSoon:true
+  },
+  {
+    name: "TKM College of Engineering",
+    place: "Kollam, Kerala",
+    image:"https://upload.wikimedia.org/wikipedia/commons/1/1f/Thangal_Kunju_Musaliar_College_of_Engineering%2C_Kollam%2C_Kerala.jpg",
+    comingSoon:true
+      
   
     },
+  {
+    name: "Model Engineering College",
+    place: "Thrikkakara, Kerala",
+    image:
+      "https://images.shiksha.com/mediadata/images/1606993941phpF5FK3q.jpeg",
+      comingSoon:true
+  },
+  {
+    name: "Government Engineering College, Thrissur",
+    place: "Thrissur, Kerala",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Gec_thrissur.jpg/1200px-Gec_thrissur.jpg",
+      
+      comingSoon:true
+  },
+  {
+    name: "SCMS School of Engineering & Technology",
+    place: "Ernakulam, Kerala",
+    image: "https://campushunt.in/photogallery/SCMS%20college.jpg",
+    comingSoon:true
+  },
+  {
+    name: "Amrita School of Engineering, Kollam",
+    place: "Kollam, Kerala",
+    image:
+      "https://webfiles.amrita.edu/2024/03/dGSNHYJM-amrita-amritapuri-campus.jpg",
+      comingSoon:true
+  },
+  {
+    name: "FISAT",
+    place: "Angamaly, Kerala",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQacxHpN9oaBm6AGN_GhYdaEsyKJKXjxDKvxA&s",
+      comingSoon:true
+  },
 ];

@@ -1,8 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { College } from "../../utils/colleges";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUniversity } from "@fortawesome/free-solid-svg-icons";
-import { LINKS } from "../../constants/links";
+
 
 const CollegeDetails = () => {
   const location = useLocation();
@@ -21,10 +19,7 @@ const CollegeDetails = () => {
           {place}
         </h3>
       </div>
-      <a href={LINKS.registerCollege}  className="bg-blue-600 font-semibold text-white  p-4  rounded hover:scale-105 transition-all hover:bg-blue-500  m-4 cursor-pointer float-right" target="_blank" >
-      <FontAwesomeIcon className="mr-2" icon={faUniversity}/>
-        Register Your college
-      </a>
+      
       {/* about section */}
       <section className="m-4 max-w-7xl mx-auto p-4 text-justify ">
         <h1>
@@ -85,7 +80,7 @@ const CollegeDetails = () => {
       <section className="m-4 max-w-7xl mx-auto p-2   rounded-md">
         <h1 className="">Organizers</h1>
         <div className="m-4 p-4 grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))]  gap-4 outline outline-1">
-          {organizers.map((organizer, index) => (
+          {organizers?.map((organizer, index) => (
             <div
               key={index}
               className="bg-white shadow-lg rounded-2xl p-4  text-center"
