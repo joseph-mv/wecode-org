@@ -38,7 +38,7 @@ export const App = () => {
         <Route path="/dashboard" element={<DashBoardPage/>} />
         <Route path="/community" element={<CommunityPage/>} />
         <Route path="/college-chapter" element={<CollegeChapter/>} />
-        <Route path="/college-chapter/:name/:image/:location" element={<CollegePage/>} />
+        <Route path="/college-chapter/:name" element={<CollegePage/>} />
 
       </Routes>
     </BrowserRouter>
