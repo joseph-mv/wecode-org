@@ -1,39 +1,88 @@
 import { useLocation } from "react-router-dom";
 import { College } from "../../utils/colleges";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUniversity } from "@fortawesome/free-solid-svg-icons";
 
 const CollegeDetails = () => {
   // const { name } = useParams();
   const location = useLocation();
-  const { name,about, image, place, organizers }: College = location.state;
+  const { name,  image, place, organizers }: College = location.state;
   return (
     <div>
       <div
-        className="h-[400px]  bg-cover bg-no-repeat bg-center flex flex-col p-2 justify-end items-end "
-        style={{ backgroundImage: `url("${image}")` }}
+        className="relative h-[400px]   flex flex-col p-2 justify-end items-end "
       >
-        <h1 className=" bg-white bg-opacity-55 text-center rounded p-2">
+         <div className=" absolute inset-0 bg-cover  bg-no-repeat bg-center bg-black brightness-75   -z-10"  style={{ backgroundImage: `url("${image}")` }}></div> 
+       
+        <h1 className=" bg-white bg-opacity-80 text-center rounded p-2">
           {name}
         </h1>
-        <h3 className="bg-white bg-opacity-55 p-2 font-semibold text-xl text-black">
+        <h3 className="bg-white bg-opacity-80 p-2 font-semibold text-xl  rounded text-black">
           {place}
         </h3>
       </div>
-      <a className="bg-blue-600 font-semibold text-white  p-2 rounded hover:scale-105  m-4 cursor-pointer float-right">
+      <a href="https://WecodeCommunity.com/register-college"   className="bg-blue-600 font-semibold text-white  p-4  rounded hover:scale-105 transition-all hover:bg-blue-500  m-4 cursor-pointer float-right" target="_blank" >
+      <FontAwesomeIcon className="mr-2" icon={faUniversity}/>
         Register Your college
       </a>
-      <section className="m-4 max-w-7xl mx-auto p-2 ">
-        <h1>About</h1>
+      {/* about section */}
+      <section className="m-4 max-w-7xl mx-auto p-4 text-justify ">
+        <h1>
+          About 
+        </h1>
+        <p className="mb-3 text-xl ">
+          👨‍💻{" "}
+         
+            Welcome to <span className="font-semibold"> the WeCode {name}
+            </span>
+         {" "}
+         Chapter!  🚀
+        </p>
+
+        <p className="ml-3 mb-3">
+          WeCode <strong>{name}</strong> is a student-driven{" "}
+          <strong>coding community</strong> where tech enthusiasts, programmers,
+          and problem solvers{" "}
+          <strong>collaborate, learn, and grow together</strong>. Our chapter
+          aims to:
+        </p>
+
+        <ul className=" ml-5 mb-3">
+          <li>
+            ✅ Conduct{" "}
+            <strong>coding contests, hackathons, and workshops</strong>
+          </li>
+          <li>
+            ✅ Provide{" "}
+            <strong>interview preparation and DSA discussions</strong>
+          </li>
+          <li>
+            ✅ Organize{" "}
+            <strong>
+              tech talks, mentorship programs, and networking events
+            </strong>
+          </li>
+          <li>
+            ✅ Foster a culture of{" "}
+            <strong>
+              collaborative learning and open-source contributions
+            </strong>
+          </li>
+        </ul>
+
         <p>
-          {about}
+          Join us and <strong>be part of an active coding network</strong> that
+          helps you level up your skills and connect with like-minded peers!
+          🚀🔥
         </p>
       </section>
-
-      <section className="m-4 max-w-7xl mx-auto p-2">
+{/* upcoming events */}
+      <section className="m-4 max-w-7xl mx-auto p-2 h-80 bg-gray-200">
         <h1>Upcoming Events</h1>
-        <h2 className="text-center text-pop-up-top text-2xl">Update soon...</h2>
+        <h2 className="text-center text-pop-up-top text-2xl mt-32">Update soon...</h2>
       </section>
 
-      <section className="m-4 max-w-7xl mx-auto p-2 bg-gray-200  rounded-md">
+      <section className="m-4 max-w-7xl mx-auto p-2   rounded-md">
         <h1 className="">Organizers</h1>
         <div className="m-4 p-4 grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))]  gap-4 outline outline-1">
           {organizers.map((organizer, index) => (
