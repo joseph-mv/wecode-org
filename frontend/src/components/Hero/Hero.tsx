@@ -6,12 +6,14 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {  useDispatch } from "react-redux";
-import { openAuthModal } from "../../redux/reducers/uiReducer";
+import { LINKS } from "../../constants/links";
+
+// import {  useDispatch } from "react-redux";
+// import { openAuthModal } from "../../redux/reducers/uiReducer";
 
 
 export const Hero = () => {
-  const dispatch=useDispatch()
+  // const dispatch=useDispatch()
   return (
     <section className=" relative  bg-hero bg-blend-overlay antialiased flex flex-col justify-center pl-[calc(2*10%)] pr-[10%] ">
       {/* Social Links */}
@@ -27,26 +29,27 @@ export const Hero = () => {
           in tech.
         </h3>
 
-        <button
-          onClick={() => dispatch(openAuthModal())}
+        <a
+          // onClick={() => dispatch(openAuthModal())}
+          href={LINKS.joinCommunity}
+          target="_blank"
           className=" bg-primary font-semibold w-max left- text-black gap-3 p-4   rounded-md bg-violet-400 transition-transform transform hover:scale-105 flex items-center sm:ml-[calc(2*30%)] ml-[20%]"
         >
           <FontAwesomeIcon icon={faUsers} className="animate-zoomInOut " />
           Join Our Community
-        </button>
+        </a>
 
       </div>
       <div className="absolute bottom-10 left-[50%] -translate-x-[50%] mx-auto   space-x-[10vw] mt-4  flex   ">
         <a
-          href="https://www.instagram.com/wecodemalayalam/"
+          href={LINKS.instagram}
           target="_blank"
           className="text-gray-900   text-center animate-zoomInOut  hover:text-gray-800 hover:animate-none hover:scale-125 text-2xl"
         >
           <FontAwesomeIcon icon={faSquareInstagram} />
         </a>
         <a
-          href=" https://www.youtube.com/@wecodemalayalam
-        "
+          href={LINKS.youtube}
           target="_blank"
           className="text-gray-900   animate-zoomInOut text-center hover:text-gray-800 hover:animate-none hover:scale-125 text-2xl"
         >
@@ -54,8 +57,7 @@ export const Hero = () => {
         </a>
 
         <a
-          href="  https://discord.com/servers/wecode-1132674812200882246
-        "
+          href={LINKS.discord}
           target="_blank"
           className="text-gray-900  animate-zoomInOut  text-center hover:text-gray-800 hover:animate-none hover:scale-125 text-2xl"
         >
@@ -63,8 +65,7 @@ export const Hero = () => {
         </a>
 
         <a
-          href="  https://t.me/Wecode1
-        "
+          href={LINKS.telegram}
           target="_blank"
           className="text-gray-900  animate-zoomInOut  text-center hover:text-gray-800 hover:animate-none hover:scale-125 text-2xl"
         >

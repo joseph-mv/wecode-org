@@ -2,9 +2,9 @@ import { useLocation } from "react-router-dom";
 import { College } from "../../utils/colleges";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUniversity } from "@fortawesome/free-solid-svg-icons";
+import { LINKS } from "../../constants/links";
 
 const CollegeDetails = () => {
-  // const { name } = useParams();
   const location = useLocation();
   const { name,  image, place, organizers }: College = location.state;
   return (
@@ -21,7 +21,7 @@ const CollegeDetails = () => {
           {place}
         </h3>
       </div>
-      <a href="https://WecodeCommunity.com/register-college"   className="bg-blue-600 font-semibold text-white  p-4  rounded hover:scale-105 transition-all hover:bg-blue-500  m-4 cursor-pointer float-right" target="_blank" >
+      <a href={LINKS.registerCollege}  className="bg-blue-600 font-semibold text-white  p-4  rounded hover:scale-105 transition-all hover:bg-blue-500  m-4 cursor-pointer float-right" target="_blank" >
       <FontAwesomeIcon className="mr-2" icon={faUniversity}/>
         Register Your college
       </a>
