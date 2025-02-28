@@ -30,15 +30,15 @@ function CollegeChapters() {
       </section>
 
       <section className="m-12 p-6 border border-gray-700 rounded-lg shadow-lg bg-gray-50">
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(270px,1fr))] justify-center   gap-6">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] justify-center   gap-6">
           {colleges.map((college, index) => (
             <div className="relative">
-              <Link
+              <Link 
                 to={`${encodeURIComponent(college.name)}`}
                 state={college}
                 onClick={(e) => college.comingSoon && e.preventDefault()}
                 key={index}
-                className={`relative  border border-gray-300 shadow-md rounded-lg p-4 bg-white flex items-center space-x-4 hover:bg-gray-100 ${
+                className={`relative h-[100%] border border-gray-300 shadow-md rounded-lg p-4 bg-white flex items-center space-x-4 hover:bg-gray-100 ${
                   college.comingSoon
                     ? " cursor-not-allowed opacity-50"
                     : "cursor-pointer"

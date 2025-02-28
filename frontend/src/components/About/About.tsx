@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUsers, faGraduationCap, faPlay, faComments } from "@fortawesome/free-solid-svg-icons";
+import { faGraduationCap, faPlay, faComments } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useRef, useState } from "react";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 
 const About = () => {
 
-  const targetNumbers = [3500, 50, 7000, 5000];
+  const targetNumbers = [14000, 50, 9000, 5000];
   const duration = 2000; // Animation duration in milliseconds
   const [numbers, setNumbers] = useState([0, 0, 0, 0]);
   const [startAnimation, setStartAnimation] =useState(false)
@@ -65,9 +66,9 @@ useEffect(() => {
   const stats = [
     {
       id: 1,
-      icon: <FontAwesomeIcon icon={faUsers} className="text-blue-500 w-10 h-10" />,
+      icon: <FontAwesomeIcon icon={faInstagram} className="text-blue-500 w-10 h-10" />,
       value: numbers[0]+"+",
-      label: "Active Members",
+      label: "Instagram ",
     },
     {
       id: 2,
