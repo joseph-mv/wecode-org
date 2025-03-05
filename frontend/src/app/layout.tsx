@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+
 import "./globals.css";
+import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
 
-import { config } from '@fortawesome/fontawesome-svg-core'
-import '@fortawesome/fontawesome-svg-core/styles.css'
-config.autoAddCss = false
-
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+// Disable automatic addition of FontAwesome CSS (handled manually)
+config.autoAddCss = false;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,9 +20,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Define metadata for the application
 export const metadata: Metadata = {
   title: "WeCode",
-  description: "",
+  description: "WeCode is a thriving community for developers and tech enthusiasts, offering resources, discussions, and collaboration opportunities to enhance coding skills and career growth.",
   icons: "/images/logo.png",
 };
 
@@ -35,9 +37,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header/>
+        <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

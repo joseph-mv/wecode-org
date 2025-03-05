@@ -2,7 +2,8 @@ import Image from "next/image";
 
 const Founder = () => {
   return (
-    <div className="max-w-4xl mx-auto mt-8">
+    <section className="max-w-4xl mx-auto mt-8">
+      {/* Section Title */}
       <h1 className="text-center">OUR FOUNDER</h1>
       <h3 className="font-serif text-lg md:ml-20 text-end mx-4 ">
         Yasir Mohammed is currently working as a Software Architect at the
@@ -18,9 +19,11 @@ const Founder = () => {
             height={100}
           />
         </div>
+
+        {/* MileStones */}
         <div className="">
-          <h4 className="mt-10">Notable Milestones:</h4>
-          <ul className="list-disc">
+          <h4 className="mt-10 mb-2 text-lg underline font-bold">Notable Milestones:</h4>
+          <ul className="list-disc mb-2">
             <li>
               Published 4 International{" "}
               <span className="font-bold">Patents </span> in the USA.{" "}
@@ -40,7 +43,7 @@ const Founder = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

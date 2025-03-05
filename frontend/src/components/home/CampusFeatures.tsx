@@ -49,17 +49,18 @@ const CampusFeatures = () => {
       caption:
         "Interact with industry leaders and gain insights from their experiences.",
     },
-    
   ];
 
   return (
-    <div className=" relative  mx-auto mt-20  outline-dashed -outline-offset-4 max-w-7xl shadow-2xl bg-linear-to-b rounded-lg from-slate-200  pb-24 py-8 px-4 border-y-2">
+    <section className=" relative  mx-auto mt-20  outline-dashed -outline-offset-4 max-w-7xl shadow-2xl bg-linear-to-b rounded-lg from-slate-200  pb-24 py-8 px-4 border-y-2">
+     
+     {/* Section Title */}
       <h1
-        className="text-center drop-shadow-lg 
-    "
-      >
+        className="text-center drop-shadow-lg">
         WHAT WECODE BRINGS TO YOUR CAMPUS
       </h1>
+
+      {/* Image at bottom right corner */}
       <Image
         className="absolute right-0 bottom-0 h-28 w-auto"
         src="/images/college.png"
@@ -87,7 +88,7 @@ const CampusFeatures = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,8 +1,18 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowsToDot,
-} from "@fortawesome/free-solid-svg-icons";
+import { faArrowsToDot } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
+
+const benefits = [
+  {
+    text: "Being part of the organizing team of the We Code club at your college will present you with numerous leadership responsibilities and chances to interact with industry and tech professionals.",
+  },
+  {
+    text: "Engaging in these experiences, combined with other activities within the We Code club, will keep you at the forefront of your field.",
+  },
+  {
+    text: "Demonstrating your teamwork, leadership, accountability, and collaboration skills is what catches the attention of companies.",
+  },
+];
 
 const BenefitsTeam = () => {
   return (
@@ -10,10 +20,7 @@ const BenefitsTeam = () => {
       <h1 className="text-center mb-2">
         BENEFITS FOR THE CLUB LEADERSHIP TEAM
       </h1>
-      <div
-        
-        className="space-y-8 p-4 "
-      >
+      <div className="space-y-8 p-4 ">
         {/*  A STRONG AND OUTSTANDING PROFILE section */}
         <div
           className={`relative m-auto sm:max-w-[700px] sm:min-w-[700px] min-w-[100vw] h-[400px] overflow-hidden 
@@ -24,33 +31,12 @@ const BenefitsTeam = () => {
           </h2>
           <div className="flex justify-center items-center ">
             <ul className="relative z-10 left-[5%] w-[70%] space-y-3 ">
-              <li className="space-x-2">
-                <FontAwesomeIcon icon={faArrowsToDot} />
-                <span>
-                  Being part of the organizing team of the We Code club at your
-                  college will present you with numerous leadership
-                  responsibilities and chances to interact with industry and
-                  tech professionals.
-                </span>
-              </li>
-              <li className="space-x-2">
-                <FontAwesomeIcon icon={faArrowsToDot} />
-                <span>
-                  {" "}
-                  Engaging in these experiences, combined with other activities
-                  within the We Code club, will keep you at the forefront of
-                  your field.
-                </span>{" "}
-              </li>
-              <li className="space-x-2">
-                <FontAwesomeIcon icon={faArrowsToDot} />
-                <span>
-                  {" "}
-                  Demonstrating your teamwork, leadership, accountability, and
-                  collaboration skills is what catches the attention of
-                  companies.
-                </span>
-              </li>
+              {benefits.map((benefit, index) => (
+                <li key={index} className="space-x-2">
+                  <FontAwesomeIcon icon={faArrowsToDot} />
+                  <span>{benefit.text}</span>
+                </li>
+              ))}
             </ul>
             <Image
               className="relative left-[8%] w-[20%] "
@@ -69,6 +55,7 @@ const BenefitsTeam = () => {
             />
           </div>
         </div>
+
         {/* EXCLUSIVE INVITATIONS section */}
         <div
           className={`relative overflow-hidden m-auto sm:max-w-[700px] sm:min-w-[700px] min-w-[100vw]  h-[400px] bg-black text-white p-2  block`}
@@ -94,6 +81,7 @@ const BenefitsTeam = () => {
             </p>
           </div>
         </div>
+
         {/* EARLY EXPERIENCE OF BEING IN AN ORGANIZATION */}
         <div
           className={`relative overflow-hidden m-auto sm:min-w-[700px] sm:max-w-[700px] min-w-[100vw] p-2 pb-4 block`}
@@ -102,6 +90,8 @@ const BenefitsTeam = () => {
             EARLY EXPERIENCE OF BEING IN AN ORGANIZATION
           </h2>
           <div className=" relative flex  text-sm justify-evenly ">
+
+            {/* First experience subsection*/}
             <div className="space-y-4 mt-20">
               <div className="max-w-44 w-[30vw] text-center bg-white rounded-md shadow-xl p-2">
                 We operate similarly to a tech company, adhering to standard
@@ -109,7 +99,6 @@ const BenefitsTeam = () => {
               </div>
               <div className="relative max-w-44 w-[30vw] text-center bg-white rounded-md shadow-xl p-2">
                 FIRST EXPERIENCE{" "}
-               
                 <Image
                   className="absolute left-[80%]  w-[50%] -rotate-[80deg] object-contain -z-10"
                   src="/images/arrow_bend_left_down_icon.png"
@@ -120,7 +109,7 @@ const BenefitsTeam = () => {
               </div>
             </div>
 
-            {
+            {/* Ownership subsection */}
               <div className="space-y-4 mt-48">
                 <div className=" max-w-44 w-[30vw] text-center bg-white rounded-md shadow-xl p-2">
                   <p>
@@ -128,9 +117,8 @@ const BenefitsTeam = () => {
                   </p>
                 </div>
                 <div className="relative max-w-44 w-[30vw] text-center bg-white rounded-md shadow-xl p-2">
-                  <span >
+                  <span>
                     OWNERSHIP{" "}
-                   
                     <Image
                       className="absolute left-[100%] bottom-0  w-[50%] -z-10 -rotate-[150deg]  object-contain"
                       src="/images/arrow_bend_left_down_icon.png"
@@ -141,10 +129,11 @@ const BenefitsTeam = () => {
                   </span>
                 </div>
               </div>
-            }
+            
+            {/* Being the best subsection */}
             <div className="space-y-4 mt-4">
               <div className="max-w-44 w-[30vw] text-center bg-white rounded-md shadow-xl p-2">
-                <p >
+                <p>
                   {" "}
                   You will acquire the necessary methods and strategies to
                   excel, setting you up for success in your professional journey
@@ -152,10 +141,7 @@ const BenefitsTeam = () => {
                 </p>
               </div>
               <div className="max-w-44 w-[30vw] text-center bg-white rounded-md shadow-xl p-2">
-                <span >
-                  {" "}
-                  BEING THE BEST
-                </span>
+                <span> BEING THE BEST</span>
               </div>
             </div>
           </div>

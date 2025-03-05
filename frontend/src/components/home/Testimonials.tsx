@@ -1,7 +1,10 @@
 import Image from "next/image";
 
 const Testimonials = () => {
+  // Base path for testimonial images
   const path = "/images/testimonials/";
+
+   // Array of testimonial image filenames
   const testimonials = [
     "mohammed_amaan.png",
     "ameena_kareem.png",
@@ -10,7 +13,7 @@ const Testimonials = () => {
     "mr.veshal_raj.png",
   ];
   return (
-    <div className="max-w-7xl p-4 mx-auto font-trebuchet outline-dashed -outline-offset-4">
+    <section className="max-w-7xl p-4 mx-auto font-trebuchet outline-dashed -outline-offset-4">
       <h1 className="text-center">TESTIMONIALS</h1>
       <div className="flex flex-wrap gap-6 justify-center ">
         {testimonials.map((testimonial, index) => (
@@ -21,10 +24,11 @@ const Testimonials = () => {
             alt={testimonial}
             width={200}
             height={200}
+            loading="lazy"
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
