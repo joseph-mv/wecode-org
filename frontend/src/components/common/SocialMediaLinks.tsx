@@ -1,8 +1,9 @@
-import { LINKS } from '@/constants/links';
-import { faDiscord, faInstagramSquare, faTelegram, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Link from 'next/link';
 import React from 'react'
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDiscord, faInstagramSquare, faTelegram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+
+import { LINKS } from '@/constants/links';
 
 // Array of social media links with respective icons
 const socialLinks = [

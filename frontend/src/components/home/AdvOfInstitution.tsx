@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowsToDot, faPerson } from "@fortawesome/free-solid-svg-icons";
-import Image from "next/image";
 
 const exposureData = [
   {

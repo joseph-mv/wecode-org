@@ -18,8 +18,8 @@ const Footer = () => {
 
       {/* Navigation Links */}
       <nav className="mt-4 sm:mt-0 flex  space-x-4">
-        {navItems.map((item, index) => (
-          <Link key={index} href={item.href} className="hover:text-blue-600">
+        {navItems.map((item, index) => ( 
+          <Link key={index} href={item.href} className="text-center hover:text-blue-600">
             {item.label}
           </Link>
         ))}

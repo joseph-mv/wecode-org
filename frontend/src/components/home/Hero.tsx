@@ -1,10 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { LINKS } from "../../constants/links";
 import SocialMediaLinks from "../common/SocialMediaLinks";
-import Image from "next/image";
 
 const Hero = () => {
   return (

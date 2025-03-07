@@ -104,7 +104,7 @@ const Header = () => {
               key={href}
               className=" border-b-1 border-gray-400 p-2 md:border-none"
             >
-              <Link
+              <Link onClick={toggleMenu}
                 href={href}
                 target={external ? "_blank" : "_self"}
                 className="link flex items-center gap-2 p-2 hover:scale-105 "
