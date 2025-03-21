@@ -6,8 +6,8 @@ import { College, colleges } from '@/lib/utils'
  * CollegeDetails Component
  * Displays details about a specific college chapter including banner, about section, upcoming events, and organizers.
  */
-const CollegeDetails = ({params}:{params:{id:string}}) => {
-
+const CollegeDetails = async(props:{ params: Promise<{ id: string }> }) => {
+const params=await props.params
   const { name, image, place, organizers }: College = colleges[+params.id];
   return (
     <div>
