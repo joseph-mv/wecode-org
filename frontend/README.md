@@ -1,24 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# wecode-web
+
+This is the main website of WeCode Community
+
+## Features
+
+- **Responsive Design**:Optimised for all devices, ensuring a great user experience on mobile, tablet, and desktop.
+- **Modern UI**: Clean and professional interface with Tailwind CSS.
+- **Interactive Components**: Engaging and dynamic content powered by Next and TypeScript.
+  
+## Technologies Used
+
+
+- **Next.js**: For building a component-based architecture.
+
+- **TypeScript**: Ensures type safety and better code maintainability.
+
+- **Tailwind CSS**: For modern, utility-first styling.
+
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Ensure you have the following installed on your local machine:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Node.js
+- npm (Node Package Manager)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clone the repository:**
+
+   ```bash
+   git clone git@github.com:WeCode-Community-Dev/wecode-web.git
+   cd wecode-web
+   git checkout feature/next.js
+
+   ```
+
+2. **Install frontend dependencies:**
+
+   ```bash
+   cd frontend
+   npm install  # or yarn install
+   ```
+
+
+### Running the application
+
+1.  **Start the frontend server :**
+
+  - Open a new terminal, navigate to the frontend directory, and run
+
+    ```bash
+
+      npm run dev # or yarn dev
+
+    ```
+
+   This command starts a local development server. By default, it runs on http://localhost:3000, where you can view the application in your browser. Any changes       you make to the code will automatically refresh the page.
+
+
+2.  **Build the frontend project for production:**
+
+     ```bash
+
+      npm run build  # or yarn build
+      npm start      # or yarn start
+
+     ```
+
+   This command generates an optimised production build in the .next folder. The build is minified and includes all necessary assets for deployment.
+
+
 
 ## Learn More
 
