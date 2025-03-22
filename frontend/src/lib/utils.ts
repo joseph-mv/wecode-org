@@ -65,7 +65,7 @@ type Organizer = {
         "Government College of Engineering, Kannur is one of the premier institutes among the 9 Government Engineering Colleges in Kerala and was established in 1986. The college is functioning in a sprawling 68-acre scenic campus, having sound and self-sufficient infrastructure,at Mangattuparamba, near the National Highway, 15 k.m from the headquarters of Kannur district.",
       place: "Kannur, Kerala",
       image:
-        "/images/collegeChapters/colleges/GCE Kannur/Government_College_of_Engineering,_Kannur.jpg",
+        "/images/collegeChapters/colleges/GCE Kannur/Gec_Kannur.jpg",
       organizers: [
         {
           name: "Aleena Ann Tomy",

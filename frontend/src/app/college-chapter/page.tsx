@@ -43,7 +43,7 @@ function CollegeChapters() {
 
       {/* College Chapters List */}
       <section className="m-12 p-6 border border-gray-700 rounded-lg shadow-lg bg-gray-50">
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] justify-center   gap-6">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(calc(220px+6vw),1fr))] justify-center   gap-6">
           {colleges.map((college, index) => (
             <div key={index} className="relative">
               <Link
@@ -61,7 +61,7 @@ function CollegeChapters() {
                   width={80}
                   height={80}
                   layout="intrinsic"
-                  className="object-cover rounded-md"
+                  className="object-cover rounded-md  aspect-video"
                 />
 
                 <div>

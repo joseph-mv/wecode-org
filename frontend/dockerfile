@@ -1,0 +1,16 @@
+# Use a lightweight Node.js image
+FROM node:18-alpine AS runner
+
+WORKDIR /app
+
+# Copy only the standalone build and necessary files
+COPY --from=builder /app/.next/standalone .  
+COPY --from=builder /app/.next/static .next/static  
+COPY --from=builder /app/public public  
+
+# Set production environment
+ENV NODE_ENV=production
+EXPOSE 3000
+
+# Start Next.js server
+CMD ["node", "server.js"]

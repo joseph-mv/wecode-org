@@ -22,7 +22,7 @@ const About = () => {
         {/* First Content Block */}
         <div
           data-aos="fade-right"
-          className="sm:absolute  relative mt-4 mx-auto sm:right-52 sm:top-24  sm:w-[70%] max-w-[700px] p-4  bg-gray-100 min-h-max shadow-md text-justify"
+          className=" sm:absolute  relative mt-4 mx-auto sm:right-52 sm:top-24  sm:w-[70%] max-w-[700px] p-4  bg-gray-100 min-h-max shadow-md text-justify"
         >
           <Image
             className="w-20 object-contain mr-4 shapeOutside"
