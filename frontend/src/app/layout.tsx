@@ -6,6 +6,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
+import ScrollToTop from "@/components/layout/ScrollToTop";
 
 // Disable automatic addition of FontAwesome CSS (handled manually)
 config.autoAddCss = false;
@@ -40,6 +41,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <ScrollToTop/>
       </body>
     </html>
   );
